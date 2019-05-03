@@ -1,0 +1,22 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Interest Calculator",
+    "scope": "/easy-interest-calc/",
+    "display": "browser",
+    "start_url": "https://ranjeetmali.github.io/easy-interest-calc/",
+    "short_name": "Interest Calcul",
+    "theme_color": "transparent",
+    "description": "",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/easy-interest-calc/assets/image/favicon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
