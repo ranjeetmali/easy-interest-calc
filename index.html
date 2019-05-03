@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="assets/image/favicon.png"/>
-    <link rel="manifest" href="assets/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -24,7 +24,7 @@
             } else {
                 // Register the service worker
                 navigator.serviceWorker
-                    .register("assets/pwabuilder-sw.js", {
+                    .register("pwabuilder-sw.js", {
                         scope: "./"
                     })
                     .then(function (reg) {
