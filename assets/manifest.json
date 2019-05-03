@@ -14,7 +14,7 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "/images/easy-interest-calc/assets/image/favicon.png",
+            "src": "/images/images/easy-interest-calc/assets/image/favicon.png",
             "type": "image/png",
             "sizes": "512x512"
         }
