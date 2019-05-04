@@ -4,34 +4,46 @@
     <title>Interest Calculator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2196F3">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="assets/image/favicon.png"/>
+    <link rel="icon" sizes="192x192" href="assets/image/favicon.png">
     <link rel="manifest" href="manifest.json">
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/moment.min.js"></script>
+
+    <style>
+        /* Show it is fixed to the top */
+        body {
+            padding-top: 6.5rem;
+        }
+
+        .navbar {
+            height: 75px;
+        }
+    </style>
     <script>
-       // This is the "Offline copy of pages" service worker
+        // This is the "Offline copy of pages" service worker
 
-// Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
 
-// Check compatibility for the browser we're running this in
-if ("serviceWorker" in navigator) {
-  if (navigator.serviceWorker.controller) {
-    console.log("[PWA Builder] active service worker found, no need to register");
-  } else {
-    // Register the service worker
-    navigator.serviceWorker
-      .register("pwabuilder-sw.js", {
-        scope: "./"
-      })
-      .then(function (reg) {
-        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-      });
-  }
-}
+        // Check compatibility for the browser we're running this in
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("pwabuilder-sw.js", {
+                        scope: "./"
+                    })
+                    .then(function (reg) {
+                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
+        }
 
     </script>
 
@@ -113,10 +125,11 @@ if ("serviceWorker" in navigator) {
     </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <a class="navbar-brand" href="#">Easy Interest Calculator</a>
-</nav><br>
-<div class="container-fluid">
+<div class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
+    <a class="navbar-brand" href="">Easy Interest Calculator</a>
+</div>
+
+<main role="main" class="container-fluid">
     <div class="row">
         <div class="col-md-6">
             <div class="card border-primary mb-3">
@@ -171,7 +184,8 @@ if ("serviceWorker" in navigator) {
                                 <!--<small id="to" class="form-text text-muted"></small>-->
                             </div>
                         </div>
-                    </div><br><br>
+                    </div>
+                    <br><br>
                 </div>
             </div>
         </div>
@@ -220,7 +234,7 @@ if ("serviceWorker" in navigator) {
 
         </div>
     </div>
-</div>
+</main>
 
 </body>
 </html>
