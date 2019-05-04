@@ -12,13 +12,12 @@ self.addEventListener("install", function (event) {
   /*event.waitUntil(
     caches.open(CACHE).then(function (cache) {
       console.log("[PWA Builder] Cached offline page during install");
-
       if (offlineFallbackPage === "ToDo-replace-this-name.html") {
         return cache.add(new Response("TODO: Update the value of the offlineFallbackPage constant in the serviceworker."));
       }
-
       return cache.add(offlineFallbackPage);
-    })*/
+    })
+  );*/
   event.waitUntil(
     caches.open(cacheName).then(function(cache) {
       return cache.addAll(
@@ -34,7 +33,6 @@ self.addEventListener("install", function (event) {
         ]
       );
     })
-  );
   );
 });
 
