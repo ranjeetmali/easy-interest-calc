@@ -2,7 +2,7 @@
     "dir": "ltr",
     "lang": "en",
     "name": "Interest Calculator",
-    "scope": "/easy-interest-calc/",
+    "scope": "/",
     "display": "standalone",
     "start_url": "/easy-interest-calc",
     "short_name": "Easy Interest Calculator",
