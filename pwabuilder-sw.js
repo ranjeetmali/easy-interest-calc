@@ -9,7 +9,7 @@ const offlineFallbackPage = "ToDo-replace-this-name.html";
 self.addEventListener("install", function (event) {
   console.log("[PWA Builder] Install Event processing");
 
-  event.waitUntil(
+  /*event.waitUntil(
     caches.open(CACHE).then(function (cache) {
       console.log("[PWA Builder] Cached offline page during install");
 
@@ -18,7 +18,23 @@ self.addEventListener("install", function (event) {
       }
 
       return cache.add(offlineFallbackPage);
+    })*/
+  event.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll(
+        [
+          '/assets/css/bootstrap.min.css',
+          '/assets/css/font-awesome.min.css',
+          '/assets/image/favicon.png',
+          '/assets/js/jquery.min.js',
+          '/assets/js/popper.min.js',
+          '/assets/js/bootstrap.min.js',
+          '/assets/js/moment.min.js',
+          '/index.html'
+        ]
+      );
     })
+  );
   );
 });
 
