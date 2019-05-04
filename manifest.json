@@ -3,7 +3,7 @@
     "lang": "en",
     "name": "Interest Calculator",
     "display": "standalone",
-    "start_url": "/easy-interest-calc",
+    "start_url": "https://ranjeetmali.github.io/easy-interest-calc",
     "short_name": "Easy Interest Calculator",
     "theme_color": "transparent",
     "description": "",
