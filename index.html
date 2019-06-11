@@ -87,11 +87,15 @@
 
                     if (interestType == "compound") {
 
-                        var newRate = (rate * 12) / 100;
+                        var newRate = rate * 12;
 
-                        var year = month / 12;
-                        //r = (amt* Math.pow((1 + (rate/(1*100))), (1*year)));
-                        var totalAmount = principalAmt * Math.pow((1 + newRate / 1), 1 * year);
+                        var years = month / 12;
+                        years = parseInt(years);
+
+                        var months = month % 12;
+
+                        var totalAmount = ( principalAmt * Math.pow(((1 + (newRate / 100))), years) ) * (1 + ( ( (months / 12) * newRate) / 100 ) );
+
                         totalAmount = parseFloat(totalAmount);
                         totalAmount = totalAmount.toFixed(2);
                         totalAmount = Math.ceil(totalAmount);
